@@ -11,7 +11,7 @@ function addToListOnClick (){
     button.addEventListener('click', onButtonClick)
 }
 function onButtonClick (){
-    if (validation(input.value)){
+    if (isNotEmpty(input.value)){
         const li = document.createElement('li')
         li.className = 'list-item'
         li.textContent = input.value
@@ -19,7 +19,7 @@ function onButtonClick (){
     }
     input.value = ''
 }
-function validation (value){
+function isNotEmpty (value){
     if (value.trim() === '') {
         alert('The field must be not empty!')
         return false
